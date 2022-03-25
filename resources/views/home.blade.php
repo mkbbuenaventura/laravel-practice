@@ -14,12 +14,13 @@
     <body>
         <div class="row">
             
-
+<h1>hello</h1>
             <table>
                 <tr>
                   <th>NAME</th>
                   <th>Email</th>
                 </tr>
+
                 @foreach($users as $user)
                 <tr>
                   <td>{{ $user->name }}</td>
@@ -28,9 +29,7 @@
                   <td><form method="post" action="/destroy/{{ $user->id }}">
                     @csrf
                     <input type="hidden" name="_method" value="DELETE">
-                    <button type="submit" class="btn btn-danger btn-icon">
-                        delete
-                    </button>
+                    <button type="submit" class="btn btn-danger btn-icon">delete</button>
                   </form></td>
                 </tr>
             @endforeach()
